@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Collectionss {
+public class Collect {
 
     public static void man(String[]args)
     {
