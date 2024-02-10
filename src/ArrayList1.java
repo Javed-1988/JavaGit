@@ -14,14 +14,18 @@ public class ArrayList1 {
         list.add(5);
 
         //Collections.sort(list);//sort Ascending order
-
+        ArrayList<Integer> list1 = new ArrayList<>(list);
+        list1.forEach(s1->System.out.println("copy of arraylist"+s1));
         list.sort(Collections.reverseOrder());// sort descending order
+        System.out.println("maximum num"+Collections.max(list));//max
+        System.out.println("minimum num"+Collections.min(list));//min
+        list.forEach(s->System.out.println(s));
 
-        for(Integer a:list)
-        {
-            //list.add(7);
-            System.out.println(a);
-        }
+//        for(Integer a:list)
+//        {
+//            //list.add(7);
+//            System.out.println(a);
+//        }
 
 
 
