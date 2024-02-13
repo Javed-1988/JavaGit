@@ -1,3 +1,5 @@
+package com.collections;
+
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CopyOnWrArrayList {

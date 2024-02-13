@@ -1,4 +1,4 @@
-
+package Oops;
 //class CustomException extends RuntimeException
 //{
 //    public CustomException(String msg)
@@ -6,9 +6,6 @@
 //        super(msg);
 //    }
 //}
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 class Example {
     // Method that may throw the custom exception
@@ -37,7 +34,7 @@ class B extends  Example{
 public class Excepttion {
     public static void main(String []args)
     {
-//        Example example = new Example();
+//        Oops.Example example = new Oops.Example();
 //        try {
 //            example.performAction(-5); // This will throw CustomException
 //        } catch (CustomException e) {

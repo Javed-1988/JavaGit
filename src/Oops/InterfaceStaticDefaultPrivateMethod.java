@@ -1,20 +1,26 @@
+package Oops;
+
 interface Parent
 {
     void abstractMethod();//need to implements by child class
     default void  defaultMethod()//need to implements by child class
 {
-    System.out.println("Default Method");
+    System.out.println("Default Method Interface Oops.Parent");
     privateMethod();
 
 }
     static void  staticMethod()//no need child implementations we can call directly by interface name
     {
-        System.out.println("static Method");
+        System.out.println("static Method Interface Oops.Parent");
 
     }
     private void  privateMethod()//can not call directly from child class have to call from default method can not call inside static method
     {
-        System.out.println("Private Method");
+        System.out.println("Private Method Interface Oops.Parent");
+    }
+    private static void privateStaticMethod()
+    {
+        System.out.println("Private Static Method Interface Oops.Parent");
     }
 }
 
@@ -23,18 +29,22 @@ interface Parent1
      void abstractMethod();//need to implements by child class
     default void  defaultMethod()//need to implements by child class
     {
-        System.out.println("Default Method");
+        System.out.println("Default Method Interface Oops.Parent1");
         privateMethod();
 
     }
     static void  staticMethod()//no need child implementations we can call directly by interface name
     {
-        System.out.println("static Method");
+        System.out.println("static Method Interface Oops.Parent1");
 
     }
     private void  privateMethod()//can not call directly from child class have to call from default method can not call inside static method
     {
-        System.out.println("Private Method");
+        System.out.println("Private Method Interface Oops.Parent1");
+    }
+    private static void privateStaticMethod()
+    {
+        System.out.println("Private Static Method Interface Oops.Parent");
     }
 }
 
@@ -69,13 +79,12 @@ class Child implements Parent,Parent1
 public class InterfaceStaticDefaultPrivateMethod {
     public static void main(String[]args)
     {
-      Child p=new Child();
+      Parent1 p=new Child();
+      p.defaultMethod();
       p.abstractMethod();
       Parent.staticMethod();
       p.defaultMethod();
       Child.staticMethod();
-
-
 
     }
 }

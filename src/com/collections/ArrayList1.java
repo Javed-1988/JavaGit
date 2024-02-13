@@ -1,3 +1,5 @@
+package com.collections;
+
 import java.util.ArrayList;
 import java.util.Collections;
 

@@ -1,13 +1,15 @@
+package Oops;
+
 class Parent2
 {
     static void display()
     {
-        System.out.println("Parent2 Static method");
+        System.out.println("Oops.Parent2 Static method");
     }
 
      private void pri()// can not override
     {
-        System.out.println("Parent2 Private Method");
+        System.out.println("Oops.Parent2 Private Method");
     }
 
 }
@@ -16,11 +18,11 @@ class Parent2
 public class MethodOverHiding extends Parent2{
     static void display()
     {
-        System.out.println("Class MethodOverHiding static method");
+        System.out.println("Class Oops.MethodOverHiding static method");
     }
     private void pri()// can not override
     {
-        System.out.println("Class MethodOverHiding Private method");
+        System.out.println("Class Oops.MethodOverHiding Private method");
     }
 
     public static void main(String [] args)
