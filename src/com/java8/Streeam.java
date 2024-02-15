@@ -1,5 +1,6 @@
 package com.java8;
 
+import designpattern.Employee;
 import designpattern.Singleton;
 
 import java.util.*;
