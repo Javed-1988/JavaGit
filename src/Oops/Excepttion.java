@@ -7,6 +7,8 @@ package Oops;
 //    }
 //}
 
+import java.sql.SQLException;
+
 class Example {
     // Method that may throw the custom exception
 //    public void performAction(int value) {
@@ -16,14 +18,18 @@ class Example {
 //        // Perform some action
 //        System.out.println("Action performed successfully");
 //    }
-     void display() throws ArithmeticException
+     void display() throws Exception
     {
         System.out.println("hi");
     }
 }
 class B extends  Example{
+
+    // If parent class throws exception not necessary child class also throws exception but
+    // child class can not throw broader exception than Parent class if Parent class does not throw any exception
+    // then child class is only allowed to throw runtime exception not compile time exception
     @Override
-     void display()
+     void display() throws SQLException
     {
         System.out.println("hi");
     }
