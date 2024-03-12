@@ -1,9 +1,11 @@
-package com.java8;
+package java8;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.IntStream;
+import java.util.StringJoiner;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class StringNonRepeat {
 
@@ -13,7 +15,7 @@ public class StringNonRepeat {
         for(int i=0;i<str.length();i++)
         {
             char c=str.charAt(i);
-            if(str.indexOf(str.charAt(i))==str.lastIndexOf(str.charAt(i)))
+            if(str.indexOf(c)==str.lastIndexOf(c))
             {
                 map.put(i,c);
                 //if want first non repeat character
@@ -41,24 +43,13 @@ public class StringNonRepeat {
 //
 //        frequencyMap.forEach((k,v)->System.out.println(k+" "+" "+v));
 
-        //Non Repeat Character
-        String str="ihymfvdggmggvgivg";
-        str.chars().mapToObj(i->(char)i).filter(c->str.indexOf(c)==str.lastIndexOf(c)).forEach(System.out::println);
+        //Non Repeat Character with position
+        String str="ihyfdggggpvgivg";
+        str.chars().mapToObj(i->(char)i).filter(c->str.indexOf(c)==str.lastIndexOf(c)).forEach(c->System.out.println("character "+c+" position "+str.indexOf(c)));
 
-        //First Non Repeat Character
-//        Optional<Character> non= str.chars().mapToObj(i->(char)i).filter(c->str.indexOf(c)==str.lastIndexOf(c)).findFirst();
-//        non.ifPresent(character -> System.out.println("first non repeat character: " + character));
-
-        //Non Repeat Character with positions
-        IntStream.range(0, str.length()).filter(i -> str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i)))
-                .forEach(k->System.out.println("Character: "+str.charAt(k)+" Position: "+k));
-
-        //First Non Repeat Character with positions
-        IntStream.range(0, str.length()).filter(i -> str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i))).limit(1)
-                .forEach(k->System.out.println("First Non Repeat Character: "+str.charAt(k)+" Position: "+k));
-
-
+        //First Non Repeat Character with position
+        Optional<Character> non= str.chars().mapToObj(i->(char)i).filter(c->str.indexOf(c)==str.lastIndexOf(c)).findFirst();
+        non.ifPresent(character -> System.out.println("first non repeat character: " + character+" position "+str.indexOf(character)));
 
     }
-
 }
