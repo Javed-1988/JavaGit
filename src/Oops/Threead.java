@@ -29,7 +29,7 @@ public class Threead extends Thread//implements Runnable
             Threead t = new Threead(i);
             //Thread t1 =new Thread(t);//if implements runnable interface
             t.start();
-            t.join();
+           // t.join();
         }
 
     }
