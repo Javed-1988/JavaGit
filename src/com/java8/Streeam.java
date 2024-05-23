@@ -1,7 +1,8 @@
-package com.java8;
+package JavaPractice.src.com.java8;
 
-import designpattern.Employee;
-import designpattern.Singleton;
+
+
+import JavaPractice.src.designpattern.Employee;
 
 import java.util.*;
 import java.util.function.ToIntFunction;
@@ -20,19 +21,8 @@ public class Streeam {
         List<String> list2=Arrays.asList("apple","samsung","redmi","oneplus","motorola","xiomi");
 
 
-//        String str = "hello";
-//
-//        Optional<Character> result = str.chars() // IntStream of character codes
-//                .mapToObj(i -> (char) i) // Convert character codes to characters
-//                .filter(c -> str.indexOf(c) == str.lastIndexOf(c)) // Filter non-repeating characters
-//                .findFirst(); // Find the first non-repeating character
-//
-//        result.ifPresentOrElse(
-//                c -> System.out.println("First non-repeating character: " + c), // Print the non-repeating character
-//                () -> System.out.println("No non-repeating character found") // Print if no non-repeating character found
-//        );
-//
-//
+
+
         List<Employee> emp=Arrays.asList(new Employee(1,"javed",5000,"IT"),
                new Employee(2,"mahmood",25000,"IT"),
                new Employee(3,"jaga",10000,"HR"),

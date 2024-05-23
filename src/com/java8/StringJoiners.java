@@ -1,4 +1,5 @@
-package com.java8;
+package JavaPractice.src.com.java8;
+
 
 import java.util.StringJoiner;
 
@@ -15,6 +16,6 @@ public class StringJoiners {
 
         System.out.println(str);
 
-
     }
+
 }

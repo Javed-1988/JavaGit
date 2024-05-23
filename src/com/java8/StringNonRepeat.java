@@ -1,4 +1,4 @@
-package java8;
+package JavaPractice.src.com.java8;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,6 +50,8 @@ public class StringNonRepeat {
         //First Non Repeat Character with position
         Optional<Character> non= str.chars().mapToObj(i->(char)i).filter(c->str.indexOf(c)==str.lastIndexOf(c)).findFirst();
         non.ifPresent(character -> System.out.println("first non repeat character: " + character+" position "+str.indexOf(character)));
+
+
 
     }
 }
