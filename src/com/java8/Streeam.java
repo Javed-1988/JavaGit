@@ -1,8 +1,6 @@
-package JavaPractice.src.com.java8;
+package com.java8;
 
-
-
-import JavaPractice.src.designpattern.Employee;
+import com.java8.Employee;
 
 import java.util.*;
 import java.util.function.ToIntFunction;
@@ -20,17 +18,13 @@ public class Streeam {
         List<String> list1=Arrays.asList("jak","apple","mahmood","zahedi","apple","zahedi");
         List<String> list2=Arrays.asList("apple","samsung","redmi","oneplus","motorola","xiomi");
 
-
-
-
-        List<Employee> emp=Arrays.asList(new Employee(1,"javed",5000,"IT"),
-               new Employee(2,"mahmood",25000,"IT"),
-               new Employee(3,"jaga",10000,"HR"),
-               new Employee(4,"balo",50000,"HR"),
-               new Employee(5,"soumen",50000,"marketing"),
-               new Employee(6,"sougata",70000,"Railway"),
-               new Employee(7,"deepak",45000,"Railway"));
-
+        List<Employee> emp = Arrays.asList(new Employee(1, "javed", 5000, "IT",35),
+                new Employee(2, "mahmood", 25000, "IT",36),
+                new Employee(3, "jaga", 10000, "HR",39),
+                new Employee(4, "balo", 50000, "HR",34),
+                new Employee(5, "soumen", 50000, "marketing",40),
+                new Employee(6, "sougata", 70000, "Railway",38),
+                new Employee(7, "deepak", 45000, "Railway",36));
 
         // Filter out duplicate strings and unique string.................
         //Set<String> uniqueStrings = new HashSet<>();

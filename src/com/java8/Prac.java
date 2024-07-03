@@ -1,10 +1,9 @@
-package JavaPractice.src.com.java8;
-
-import JavaPractice.src.designpattern.Employee;
+package com.java8;
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Prac {
 
@@ -32,70 +31,74 @@ public class Prac {
         List<String> list1 = Arrays.asList("jak", "apple", "mahmood", "zahedi", "apple", "zahedi");
         List<String> list2 = Arrays.asList("apple", "samsung", "redmi", "oneplus", "motorola", "xiomi");
 
-        List<Employee> emp = Arrays.asList(new Employee(1, "javed", 5000, "IT"),
-                new Employee(2, "mahmood", 25000, "IT"),
-                new Employee(3, "jaga", 10000, "HR"),
-                new Employee(4, "balo", 50000, "HR"),
-                new Employee(5, "soumen", 50000, "marketing"),
-                new Employee(6, "sougata", 70000, "Railway"),
-                new Employee(7, "deepak", 45000, "Railway"));
+        List<Employee> emp = Arrays.asList(new Employee(1, "javed", 5000, "IT",35),
+                new Employee(2, "mahmood", 25000, "IT",36),
+                new Employee(3, "jaga", 10000, "HR",39),
+                new Employee(4, "balo", 50000, "HR",34),
+                new Employee(5, "soumen", 52000, "marketing",40),
+                new Employee(6, "sougata", 70000, "Railway",39),
+                new Employee(7, "deepak", 45000, "Railway",36),
+                new Employee(8, "sumanta", 35000, "Railway",38));
 
-//          Collections.sort(list1,Comparator.reverseOrder());
-//          list1.forEach(System.out::println);
 
-//        long a=list1.stream().count();
-//        System.out.println(a);
-//        Set<String> uniqueStrings = new HashSet<>();
-//        Set<String> duplicateStrings = new HashSet<>();
-//        list1.stream().filter(s->!uniqueStrings.add(s)).forEach(duplicateStrings::add);
-//        duplicateStrings.forEach(System.out::println);
-
-        //list.stream().sorted().forEach(System.out::println);
-        //list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
-
-//        OptionalInt a=list.stream().mapToInt(Integer::intValue).max();
-//        System.out.println(a);
+       String str="vghtresvbmjgggjg";
 //
-//        OptionalInt a=list.stream().mapToInt(Integer::intValue).min();
+//        int sum=0;
+//        for(int i = 0; i<str.length();i++)
+//        {
+//            char ch=str.charAt(i);
+//            sum=sum+Integer.parseInt(String.valueOf(ch));
+//            System.out.println(sum);
+//
+//        }
+
+//       long a= list.stream().count();
+//       System.out.println(a);
+
+//        Collections.sort(list);
+//        list.forEach(System.out::println);
+//        Collections.sort(list,Comparator.reverseOrder());
+//        list.forEach(System.out::println);
+
+//        Set<String> uniqueString=new HashSet<>();
+//        Set<String> duplicateString=new HashSet<>();
+//
+//        list1.stream().filter(a->!uniqueString.add(a)).forEach(s->duplicateString.add(s));
+//        duplicateString.forEach(System.out::println);
+
+//        long a=list.stream().mapToInt(Integer::intValue).max().orElseThrow();
 //        System.out.println(a);
 
-//        OptionalDouble a=list.stream().mapToInt(Integer::intValue).average();
-//        System.out.println(a);
+        //list1.stream().sorted(Comparator.comparing(a->a.length(),Comparator.reverseOrder())).forEach(System.out::println);
 
-//       long a= list.stream().mapToInt(Integer::intValue).sum();
-//        System.out.println(a);
+//      Optional<Character> non=str.chars().mapToObj(i->(char)i).filter(s->str.indexOf(s)==str.lastIndexOf(s)).findFirst();
+//      non.ifPresent(character -> System.out.println("first non repeat character: " + character+" position "+str.indexOf(character)));
+      //str.chars().mapToObj(i->(char)i).filter(s->str.indexOf(s)==str.lastIndexOf(s)).forEach(System.out::println);
 
-        //list1.stream().sorted(Comparator.comparingInt(String::length)).forEach(System.out::println);
+        //emp.stream().sorted(Comparator.comparing(Employee::getAge)).forEach(System.out::println);
 
-        //String str = "hytrhgtryedvgftrjkkv";
-        //str.chars().mapToObj(i -> (char) i).filter(s1 -> str.indexOf(s1) == str.lastIndexOf(s1)).forEach(c -> System.out.println("character " + c + " position " + str.indexOf(c)));
+        //emp.stream().sorted(Comparator.comparing(Employee::getAge,Comparator.reverseOrder())).map(a->a.getName()).forEach(System.out::println);
 
-//        Optional<Character> non = str.chars().mapToObj(i -> (char) i).filter(s1 -> str.indexOf(s1) == str.lastIndexOf(s1)).findFirst();
-//        non.ifPresent((character -> System.out.println("char-----" + character + " Position-----" + str.indexOf(character))));
+        //emp.stream().max(Comparator.comparing(Employee::getAge)).map(a->a.getName()).stream().forEach(System.out::println);
 
-        //str.chars().mapToObj(i -> (char) i).filter(s1 -> str.indexOf(s1) != str.lastIndexOf(s1)).forEach(c -> System.out.println("character " + c + " position " + str.indexOf(c)));
+//      Map<String, Optional<Employee>> op=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.maxBy(Comparator.comparing(Employee::getAge))));
+//
+//      op.forEach((k,v)->
+//      {
+//
+//          System.out.println(k);
+//          v.ifPresent(System.out::println);
+//
+//      });
 
-       // emp.stream().sorted(Comparator.comparing(Employee::getName)).forEach(s->System.out.println(s));
+//      Optional<Map.Entry<String, Long>> map=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
+//              .entrySet().stream().max(Comparator.comparing(Map.Entry::getValue));
+//
+//        Map.Entry<String, Long> entry = map.get();
+//        System.out.println(entry.getKey()+entry.getValue());
 
-        //emp.stream().sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary).reversed()).forEach(s->System.out.println(s));
-
-       //emp.stream().max(Comparator.comparing(Employee::getSalary)).map(s->s.getName()+s.getSalary()).stream().forEach(s->System.out.println(s));
-
-        //emp.stream().max(Comparator.comparing(Employee::getSalary)).stream().forEach(s->System.out.println(s));
-
-        //emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.maxBy(Comparator.comparing(Employee::getSalary)))).forEach((k,v)->System.out.println(k+v));
-
-        //emp.stream().map(s->s.getSalary()*1.2).forEach(System.out::println);
-
-        //emp.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
-
-
-        emp.stream().filter(s->s.getSalary()>20000).collect(Collectors.groupingBy(Employee::getDepartment)).forEach((k,v)->System.out.println(k+v));
-
-
-
-
-
+        Optional<Employee> a=emp.stream().sorted(Comparator.comparing(Employee::getSalary,Comparator.reverseOrder())).skip(1).findFirst();
+        a.ifPresent(s->System.out.println(s.getName()));
 
 
 
