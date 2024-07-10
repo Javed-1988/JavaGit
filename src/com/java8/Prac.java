@@ -36,7 +36,7 @@ public class Prac {
                 new Employee(3, "jaga", 10000, "HR",39),
                 new Employee(4, "balo", 50000, "HR",34),
                 new Employee(5, "soumen", 52000, "marketing",40),
-                new Employee(6, "sougata", 70000, "Railway",39),
+                new Employee(6, "sougata", 70000, "Railway",42),
                 new Employee(7, "deepak", 45000, "Railway",36),
                 new Employee(8, "sumanta", 35000, "Railway",38));
 
@@ -87,9 +87,54 @@ public class Prac {
 //      {
 //
 //          System.out.println(k);
-//          v.ifPresent(System.out::println);
+//          v.ifPresent(a->System.out.println(a.getName()));
 //
 //      });
+
+//     Map<String,List<Employee>> op=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.filtering(a->a.getAge()>35 && a.getAge()<40,Collectors.toList())));
+//        op.forEach((k,v)->
+//        {
+//
+//            System.out.println(k);
+//           v.forEach(a->System.out.println(a.getName()));
+//
+//        });
+
+        Map<String,Long> op=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+
+        Optional<Map.Entry<String, Long>> map=op.entrySet().stream().max(Map.Entry.comparingByValue());
+
+        // Output the department with the highest number of students
+        map.ifPresent(entry -> System.out.println("Department with highest number of students: " + entry.getKey() + " (" + entry.getValue() + " students)"));
+
+//        Map<String, List<Employee>> op=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.filtering(a->a.getName().startsWith("b"),Collectors.toList())));
+//
+//        op.forEach((k,v)->
+//        {
+//
+//            System.out.println(k);
+//            v.forEach(a->System.out.println(a.getName()));
+//
+//        });
+
+//        Map<String,Double> op=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.averagingDouble(Employee::getSalary)));
+//
+//        op.forEach((k,v)->
+//        {
+//
+//            System.out.println(k);
+//            System.out.println(v);
+
+       // });
+
+//        Map<String, Long> op= emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()));
+//        op.forEach((k,v)->
+//        {
+//
+//            System.out.println(k);
+//          System.out.println(v);
+//
+//                 });
 
 //      Optional<Map.Entry<String, Long>> map=emp.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.counting()))
 //              .entrySet().stream().max(Comparator.comparing(Map.Entry::getValue));
@@ -97,8 +142,8 @@ public class Prac {
 //        Map.Entry<String, Long> entry = map.get();
 //        System.out.println(entry.getKey()+entry.getValue());
 
-        Optional<Employee> a=emp.stream().sorted(Comparator.comparing(Employee::getSalary,Comparator.reverseOrder())).skip(1).findFirst();
-        a.ifPresent(s->System.out.println(s.getName()));
+//        Optional<Employee> a=emp.stream().sorted(Comparator.comparing(Employee::getSalary,Comparator.reverseOrder())).skip(1).findFirst();
+//        a.ifPresent(s->System.out.println(s.getName()));
 
 
 
