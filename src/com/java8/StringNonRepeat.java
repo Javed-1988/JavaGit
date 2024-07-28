@@ -31,47 +31,42 @@ public class StringNonRepeat {
     public static void main(String[]args)
     {
 
-        String str="aaaab";
+        String str="aaab";
 
         Set<Character> duplicateElement=new HashSet<>();
-        Set<Character> uniqueElement=new HashSet<>();
-
-        for(int i=0;i<str.length();i++)
-        {
-            for(int j=i+1;j<str.length();j++)
-            {
-                if(str.charAt(i)==str.charAt(j))
-                {
-                    duplicateElement.add(str.charAt(i));
-                }
-                else {
-                    uniqueElement.add(str.charAt(i));
-                }
-            }
-        }
-
-        uniqueElement.forEach(System.out::println);
-
-          //String palindrome or not.............
-//        char[] c= str.toCharArray();
-//        char[] d=new char[c.length];
+//        Set<Character> uniqueElement=new HashSet<>();
 //
-//        for(int i=c.length-1;i>0;i--)
+//        for(int i=0;i<str.length();i++)
 //        {
-//            for(int j=0;j<d.length;j++)
+//            for(int j=i+1;j<str.length();j++)
 //            {
-//                d[j]=c[i];
+//                if(str.charAt(i)==str.charAt(j))
+//                {
+//                    duplicateElement.add(str.charAt(i));
+//                }
+//                else {
+//                    uniqueElement.add(str.charAt(i));
+//                }
 //            }
 //        }
-//        String str1=String.valueOf(d);
-//        System.out.println(str1);
-//        if(str.equals(str1))
-//        {
-//            System.out.println("palindrome");
-//        }
-//        else {
-//            System.out.println("not palindrome");
-//        }
+//
+//        uniqueElement.forEach(System.out::println);
+
+         // String palindrome or not.............
+        char[] c= str.toCharArray();
+        String str1="";
+        for(int i=c.length-1;i>=0;i--)
+        {
+            str1=str1+c[i];
+        }
+
+        if(str.equals(str1))
+        {
+            System.out.println("palindrome");
+        }
+        else {
+            System.out.println("not palindrome");
+        }
 
         // find common element in three arrays.............
 
