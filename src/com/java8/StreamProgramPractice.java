@@ -82,7 +82,7 @@ public class StreamProgramPractice {
         //List<Employee> empList=emp.stream().max(Comparator.comparing(Employee::getAge)).stream().toList();
         //List<Employee> empList=emp.stream().min(Comparator.comparing(Employee::getAge)).stream().toList();
         //empList.forEach(System.out::println);
-        // long a=emp.stream().mapToInt(Employee::getAge).max().orElseThrow();
+
         // System.out.println(a);
 
         //find second-highest age in employee object.....

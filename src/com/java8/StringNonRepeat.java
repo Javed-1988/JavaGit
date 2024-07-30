@@ -7,31 +7,50 @@ import java.util.stream.Collectors;
 
 public class StringNonRepeat {
 
-    public static Map<Integer,Character> nonRepeat(String str)
-    {
-        Map<Integer,Character> map=new HashMap<>();
-        for(int i=0;i<str.length();i++)
-        {
-            char c=str.charAt(i);
-            if(str.indexOf(c)==str.lastIndexOf(c))
-            {
-                map.put(i,c);
-                //if want first non repeat character
-                //break;
-
-            }
-            else {
-                //find duplicate element
-                //map.put(i,c);
-            }
-        }
-        return map;
-    }
+//    public static Map<Integer,Character> nonRepeat(String str)
+//    {
+//        Map<Integer,Character> map=new HashMap<>();
+//        for(int i=0;i<str.length();i++)
+//        {
+//            char c=str.charAt(i);
+//            if(str.indexOf(c)==str.lastIndexOf(c))
+//            {
+//                map.put(i,c);
+//                //if want first non repeat character
+//                //break;
+//
+//            }
+//            else {
+//                //find duplicate element
+//                //map.put(i,c);
+//            }
+//        }
+//        return map;
+//    }
 
     public static void main(String[]args)
     {
 
-        String str="aaab";
+        String str="malylam";
+
+//        HashMap<Character,Integer> map =new HashMap<>();
+//
+//        char [] c=str.toCharArray();
+//
+//        for (int i=0;i<c.length;i++)
+//        {
+//            if(map.containsKey(c[i]))
+//            {
+//                map.put(c[i],map.get(c[i])+1);
+//            }
+//            else {
+//                map.put(c[i],1);
+//            }
+//        }
+//
+//        map.forEach(((k,v)->System.out.println("character-"+k+" occurrence--"+v)));
+
+
 
         Set<Character> duplicateElement=new HashSet<>();
 //        Set<Character> uniqueElement=new HashSet<>();
@@ -105,8 +124,8 @@ public class StringNonRepeat {
 
 
 // Repeating character and occurrence..............
-       //String str="abcabcd";
-//        Map<Character, Long> frequencyMap= s.chars().mapToObj(i->(char)i).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+//       String str2="abcabcd";
+//        Map<Character, Long> frequencyMap= str2.chars().mapToObj(i->(char)i).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
 //                .entrySet().stream().filter(k->k.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
 //
 //        frequencyMap.forEach((k,v)->System.out.println(k+" "+" "+v));
