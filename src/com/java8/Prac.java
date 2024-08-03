@@ -11,7 +11,7 @@ public class Prac {
     public static void main(String[] args) {
 
 
-        List<Integer> list = Arrays.asList(10, 20, 40, 55, 6, 30, 140, 5,65);
+        //List<Integer> list = Arrays.asList(10, 20, 40, 55, 6, 30, 140, 5,65);
 
         List<String> list1 = Arrays.asList("jak", "apple", "mahmood", "zahedi", "apple", "zahedi");
         List<String> list2 = Arrays.asList("apple", "samsung", "redmi", "oneplus", "motorola", "xiomi");
@@ -25,7 +25,7 @@ public class Prac {
                 new Employee(7, "deepak", 45000, "Railway", 36),
                 new Employee(8, "sumanta", 35000, "Railway", 38));
 
-        String str="hgtrfghhyruimn";
+        //String str="hgtrfghhyruimn";
 
 //        1. Arrays element count.........
 //        2.list sort ascending order..........
@@ -51,7 +51,7 @@ public class Prac {
 //        22.Department wise which age is highest and lowest..............
 //        23.String str="orange:1;apple:2;orange:5;pears:10";  output---orange-6,apple-2,pears=10
 //        24.int[] nums=[1,1,1,2,2,2,3,3,3]                    output----[1,1,2,2,3,3]
-//        25. int [] num=[1,,3,4,1,3,5]                        output---[1,3,4,5] only unique showing
+//        25. int [] num=[1,3,4,1,3,5]                        output---[1,3,4,5] only unique showing
 //        26. nums=[2,3,10,7,6]                                output--- check 2*3=6 next element is 6 or not 3*10=30 next element 30 0r not
 
 
@@ -62,5 +62,15 @@ public class Prac {
 
 
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+

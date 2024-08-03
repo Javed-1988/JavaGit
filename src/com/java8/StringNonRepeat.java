@@ -50,6 +50,27 @@ public class StringNonRepeat {
 //
 //        map.forEach(((k,v)->System.out.println("character-"+k+" occurrence--"+v)));
 
+//        String str="orange:1;apple:2;orange:5;pears:10;apple:5";
+//        String[] entries=str.split(";");
+//        HashMap<String,Integer> map=new HashMap<>();
+//
+//        for(int i=0;i<entries.length;i++) {
+//            String[] parts = entries[i].split(":");
+//            String fruit = parts[0];
+//            int qty = Integer.parseInt(parts[1]);
+//            //System.out.println(fruit);
+//
+//            if (map.containsKey(fruit)) {
+//
+//                map.put(fruit, map.get(fruit) + qty);
+//            } else {
+//
+//                map.put(fruit, qty);
+//            }
+//        }
+//
+//        map.forEach((k,v)->System.out.println(k+"-"+v));
+
 
 
         Set<Character> duplicateElement=new HashSet<>();
@@ -72,20 +93,20 @@ public class StringNonRepeat {
 //        uniqueElement.forEach(System.out::println);
 
          // String palindrome or not.............
-        char[] c= str.toCharArray();
-        String str1="";
-        for(int i=c.length-1;i>=0;i--)
-        {
-            str1=str1+c[i];
-        }
-
-        if(str.equals(str1))
-        {
-            System.out.println("palindrome");
-        }
-        else {
-            System.out.println("not palindrome");
-        }
+//        char[] c= str.toCharArray();
+//        String str1="";
+//        for(int i=c.length-1;i>=0;i--)
+//        {
+//            str1=str1+c[i];
+//        }
+//
+//        if(str.equals(str1))
+//        {
+//            System.out.println("palindrome");
+//        }
+//        else {
+//            System.out.println("not palindrome");
+//        }
 
         // find common element in three arrays.............
 
@@ -179,6 +200,101 @@ public class StringNonRepeat {
 
 //        Arrays.sort(chars);
 //        System.out.println(chars);
+
+//        String str="123;45;98";
+//
+//        String [] str1= str.split(";");
+//        int temp=0;
+//
+//        for(int i=0;i<str1.length;i++)
+//        {
+//            // System.out.println(str1[i]);
+//            char [] c=str1[i].toCharArray();
+//            for(int j=0;j<c.length;j++)
+//            {
+//                temp=temp+Integer.parseInt(String.valueOf(c[j]));
+//            }
+//        }
+//        System.out.println(temp);
+
+        //25. int [] num=[1,3,4,1,3,5]                        output---[1,3,4,5] only unique showing
+
+//        int [] num={1,3,4,1,3,5};
+//        List<Integer> list=new ArrayList<>();
+//        //System.out.println(num1.length);
+//        HashSet<Integer> set=new HashSet<>();
+//
+//        for(int i=0;i<num.length;i++)
+//        {
+//            //System.out.println(list.size());
+//            if(list.isEmpty())
+//            {
+//                list.add(num[i]);
+//            }
+//            if(list.contains(num[i]))
+//            {
+//
+//            }
+//            else {
+//                list.add(num[i]);
+//            }
+//
+//
+//
+//        }
+//
+//        list.forEach(System.out::println);
+
+        //nums=[2,3,10,7,6]                                output--- check 2*3=6 next element is 6 or not 3*10=30 next element 30 0r not
+
+
+//        int[] nums = {2, 3, 10, 30, 6,7,42,9};
+//
+//        for (int i = 0; i < nums.length; i++) {
+//
+//            int temp = 0;
+//            int j = i + 1;
+//            int k = i + 2;
+//
+//            if (j < nums.length) {
+//                temp = nums[i] * nums[j];
+//            }
+//            if (k < nums.length) {
+//                if (temp == nums[k]) {
+//                    System.out.println("true");
+//                } else {
+//                    System.out.println("false");
+//                }
+//
+//            }
+//        }
+
+//        int [] nums={2,4,7,64,32,9,16}; // finding the power of 2 each array element
+//
+//        int num=2;
+//
+//
+//        for(int i=0;i<nums.length;i++)
+//        {
+//            int number=nums[i];
+//            if(number%2==0)
+//            {
+//                int power=0;
+//                while(number>=1) {
+//                    number = number / 2;
+//                    if(number>=1)
+//                    {
+//                        power++;
+//                    }
+//
+//                }
+//                System.out.println("power is="+power);
+//            }
+//            else {
+//                System.out.println(nums[i]+" is not power of 2");
+//            }
+//
+//        }
 
 
 
