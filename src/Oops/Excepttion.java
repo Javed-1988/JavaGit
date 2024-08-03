@@ -51,10 +51,19 @@ public class Excepttion {
 //        }
         try
         {
-            return;
+           int a=10/0;
+           System.out.println("try");
         }
+        catch(ArithmeticException e)
+        {
+            e.printStackTrace();
+            System.out.println("catch block");
+        }
+
         finally {
             System.out.println("finally");
         }
+
+
     }
 }

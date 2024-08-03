@@ -19,8 +19,10 @@ public class HashLinkedTreeMap {
         //Collections.synchronizedMap(map);//for synchronized hashmap
 
         map.put(5,"javed");
+        map.put(null,"apple");
         map.put(1,"Jav");
         map.put(2,"Jak");
+        map.put(null,"banana");
         map.put(7,"Jak");
         map.put(3,"Jamm");
         map.put(4,"Jamm");
