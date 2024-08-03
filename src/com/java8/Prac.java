@@ -11,7 +11,7 @@ public class Prac {
     public static void main(String[] args) {
 
 
-        //List<Integer> list = Arrays.asList(10, 20, 40, 55, 6, 30, 140, 5,65);
+        List<Integer> list = Arrays.asList(10, 20, 40, 55, 6, 30, 140, 5,65);
 
         List<String> list1 = Arrays.asList("jak", "apple", "mahmood", "zahedi", "apple", "zahedi");
         List<String> list2 = Arrays.asList("apple", "samsung", "redmi", "oneplus", "motorola", "xiomi");
