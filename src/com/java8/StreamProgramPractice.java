@@ -147,6 +147,11 @@ public class StreamProgramPractice {
         //Map<String,Long> map=emp.stream().collect((Collectors.groupingBy(Employee::getDepartment,Collectors.counting())));
         //map.entrySet().stream().max(Map.Entry.comparingByValue()).stream().forEach(System.out::println);
 
+        //Find particular Dept Average age....................
+
+//        Double b=emp.stream().filter(a->a.getDepartment().equals("IT")).mapToInt(Employee::getAge).average().orElseThrow();
+//        System.out.println(b);
+
 
 
 

@@ -26,30 +26,8 @@ public class Prac {
                 new Employee(8, "sumanta", 35000, "Railway", 38));
 
 
-       int []num={0,1,0,0,1,1,0,1,1,0};
-       int target=0;
-       int replace=0;
-       int temp=0;
-
-        for(int i=0;i<num.length;i++)
-       {
-           for(int j=i+1;j<num.length;j++)
-           {
-               if(num[i]<num[j])
-               {
-                   temp=num[i];
-                   num[i]=num[j];
-                   num[j]=temp;
-               }
-           }
-
-
-       }
-        for(int k:num)
-        {
-            System.out.println(k);
-        }
-
+       Optional<String> name=emp.stream().max(Comparator.comparing(Employee::getAge)).map(Employee::getDepartment);
+       name.ifPresent(System.out::println);
 
 
 

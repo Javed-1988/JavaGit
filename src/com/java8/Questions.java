@@ -30,4 +30,5 @@ public class Questions {
 //        25. int [] num=[1,3,4,1,3,5]                        output---[1,3,4,5] only unique showing
 //        26. nums=[2,3,10,7,6]                                output--- check 2*3=6 next element is 6 or not 3*10=30 next element 30 0r not
 //        27. int [] nums={2,4,7,64,32,9,16};             // finding the power of 2 each array element
+//          28. Average Salary of IT Deoartment.........
 }
