@@ -17,7 +17,7 @@ public class Prac {
         List<String> list2 = Arrays.asList("apple", "samsung", "redmi", "oneplus", "motorola", "xiomi");
 
         List<Employee> emp = Arrays.asList(new Employee(1, "javed", 5000, "IT", 35),
-                new Employee(2, "mahmood", 25000, "IT", 36),
+                new Employee(2, "mahmood", 25000, "IT", 46),
                 new Employee(3, "jaga", 10000, "HR", 39),
                 new Employee(4, "balo", 50000, "HR", 34),
                 new Employee(5, "soumen", 52000, "marketing", 40),
@@ -26,8 +26,8 @@ public class Prac {
                 new Employee(8, "sumanta", 35000, "Railway", 38));
 
 
-       Optional<String> name=emp.stream().max(Comparator.comparing(Employee::getAge)).map(Employee::getDepartment);
-       name.ifPresent(System.out::println);
+
+
 
 
 

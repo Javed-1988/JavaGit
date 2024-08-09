@@ -59,7 +59,7 @@ class Child implements Parent,Parent1
     @Override
     public void  defaultMethod()//need to implements by child class
     {
-        System.out.println("Default Method Implements By Class");
+       Parent.super.defaultMethod();
 
 
     }

@@ -271,15 +271,14 @@ public class StringNonRepeat {
 
 //        int [] nums={2,4,7,64,32,9,16}; // finding the power of 2 each array element
 //
-//        int num=2;
-//
-//
-//        for(int i=0;i<nums.length;i++)
+//       int number=0;
+//       for(int i=0;i<nums.length;i++)
 //        {
-//            int number=nums[i];
+//            int power=0;
+//            number=nums[i];
 //            if(number%2==0)
 //            {
-//                int power=0;
+//                int temp=1;
 //                while(number>=1) {
 //                    number = number / 2;
 //                    if(number>=1)
@@ -288,14 +287,58 @@ public class StringNonRepeat {
 //                    }
 //
 //                }
-//                System.out.println("power is="+power);
+//                for(int j=0;j<power;j++)
+//                {
+//                    temp=temp*2;
+//                }
+//                if(temp==nums[i])
+//                {
+//                    System.out.println("Power is--"+power);
+//                }
+//
+//                else {
+//                    System.out.println("Not Power of 2--");
+//                }
 //            }
 //            else {
-//                System.out.println(nums[i]+" is not power of 2");
+//                System.out.println("false");
 //            }
 //
 //        }
 
+        //Amstrong or not.......................
+//        int value=0;
+//
+//
+//        for(int i=0;i<=100000;i++) {
+//
+//            int number=0;
+//            int val=0;
+//            value=i;
+//            while (value != 0) {
+//                int digit = value % 10;
+//                if(i<1000)
+//                {
+//                    val = digit * digit * digit;
+//                }
+//                if(i>1000 && i<10000)
+//                {
+//                    val = digit * digit * digit * digit;
+//                }
+//                if(i>10000 && i<100000)
+//                {
+//                    val = digit * digit * digit * digit * digit;
+//                }
+//
+//                number = number + val;
+//                value = value / 10;
+//
+//
+//            }
+//            if (i == number) {
+//                System.out.println("amstrong--"+i);
+//            }
+//        }
 
 
 

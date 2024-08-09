@@ -11,27 +11,27 @@ interface Shape {
 class Circle implements Shape {
     @Override
     public void draw() {
-        System.out.println("Drawing designpattern.Circle");
+        System.out.println("Drawing design pattern.Circle");
     }
 }
 
 class Rectangle implements Shape {
     @Override
     public void draw() {
-        System.out.println("Drawing designpattern.Rectangle");
+        System.out.println("Drawing design pattern.Rectangle");
     }
 }
 
 class Square implements Shape {
     @Override
     public void draw() {
-        System.out.println("Drawing designpattern.Square");
+        System.out.println("Drawing design pattern.Square");
     }
 }
 
 // Step 3: Create a Factory Class
 class ShapeFactory {
-    // Factory method to get a designpattern.Shape object
+    // Factory method to get a design pattern.Shape object
     public static Shape getShape(String shapeType) {
         if (shapeType == null) {
             return null;

@@ -8,7 +8,6 @@ package Oops;
 //}
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 class Example {
     // Method that may throw the custom exception
@@ -40,7 +39,7 @@ class B extends  Example{
 }
 
 
-public class Excepttion {
+public class ExceptionExample {
     public static void main(String []args)
     {
 //        Oops.Example example = new Oops.Example();

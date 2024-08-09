@@ -2,7 +2,7 @@ package Oops;
 
 import java.util.HashMap;
 
-public class Sttrring {
+public class StringExample {
 
     public HashMap<Integer,Character> findFirstOccurence(String str)
     {
@@ -22,7 +22,7 @@ public class Sttrring {
 
     public static void main(String[]args)
     {
-        Sttrring s =new Sttrring();
+        StringExample s =new StringExample();
         HashMap<Integer,Character> map =s.findFirstOccurence("HelloWorldelloorld");
         map.forEach((k,v)->System.out.println(k+" "+v));
 
