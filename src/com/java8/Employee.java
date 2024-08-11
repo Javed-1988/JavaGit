@@ -10,9 +10,18 @@ public class Employee {
     private double salary;
     private String department;
     private int age;
+    private String sex;
 
     public int getId() {
         return id;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     @Override
@@ -39,13 +48,16 @@ public class Employee {
         return Objects.hash(id, name, salary, department, age);
     }
 
-    public Employee(int id, String name, double salary, String department, int age) {
+    public Employee(int id, String name, double salary, String department, int age, String sex) {
         this.id = id;
         this.name = name;
         this.salary = salary;
         this.department = department;
         this.age = age;
+        this.sex = sex;
     }
+
+
 
     public void setId(int id) {
         this.id = id;
