@@ -5,7 +5,7 @@ interface Shape {
 }
 
 //Abstract Factory Pattern says that just define an interface or abstract class for creating families
-// of related (or dependent) objects but without specifying their concrete sub-classes.
+// of related (or dependent) objects but without specifying their concrete subclasses.
 
 // Step 2: Create Concrete Classes
 class Circle implements Shape {
