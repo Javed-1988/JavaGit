@@ -4,6 +4,7 @@ package com.java8;
 interface functional
 {
     void display(int...a);
+
 }
 
 
